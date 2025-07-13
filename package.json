@@ -1,0 +1,117 @@
+{
+  "private": true,
+  "name": "AI-ripper",
+  "version": "1.0.0",
+  "description": "AI-ripper, invisible character remover",
+  "author": {
+    "name": "Klaudi Bregu",
+    "email": "info@hugston.com"
+  },
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win --x64 --publish=never",
+    "build": "npm run dist:win"
+  },
+  "files": [
+    "dist/",
+    "build/",
+    "readme.md"
+  ],
+  "build": {
+    "asar": true,
+    "asarUnpack": [
+      "runtimes/**"
+    ],
+    "appId": "com.hugston.one",
+    "productName": "AI-ripper",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "runtimes/**/*",
+      "build/icon.ico",
+      "build/licence.txt",
+      "readme.md",
+      "package.json"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "msiWrapped",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "artifactName": "${productName}-${version}-${arch}.exe",
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "multiLanguageInstaller": true,
+      "displayLanguageSelector": true,
+      "installerLanguages": [
+        "en_US",
+        "ar_SA",
+        "bg_BG",
+        "cs_CZ",
+        "da_DK",
+        "de_DE",
+        "el_GR",
+        "es_ES",
+        "fi_FI",
+        "fr_FR",
+        "he_IL",
+        "hu_HU",
+        "it_IT",
+        "ja_JP",
+        "ko_KR",
+        "nl_NL",
+        "nb_NO",
+        "pl_PL",
+        "pt_BR",
+        "pt_PT",
+        "ro_RO",
+        "ru_RU",
+        "sk_SK",
+        "sv_SE",
+        "th_TH",
+        "tr_TR",
+        "uk_UA",
+        "zh_CN",
+        "zh_TW"
+      ],
+      "license": "build/licence.txt",
+      "warningsAsErrors": false
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable-${arch}.${ext}"
+    },
+    "publish": null
+  },
+  "devDependencies": {
+    "electron": "^37.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
+  }
+}
