@@ -1,12 +1,14 @@
-AI Ripper
+# AI Ripper
+- # Hidden/Invisible Unicode Character Cleaner
+- # Portable and installer for Windows
+- https://hugston.com/uploads/software/AI-ripper-1.0.0-portable-x64.exe
+
+<img width="1823" height="974" alt="Screenshot 2025-07-13 085701" src="https://github.com/user-attachments/assets/b5d5d949-7083-4f54-8500-02ed167755f6" />
 
 
 
-Hidden/Invisible Unicode Character Cleaner
 
-
-
-Overview
+# Overview
 
 
 
@@ -16,7 +18,8 @@ Version: 1.0
 
 Author: Klaudi Bregu
 
-License: Hugston License (with additional usage restrictions)
+# License: 
+Hugston License (with additional usage restrictions)
 
 
 
@@ -42,7 +45,8 @@ Installation
 
 
 
-Download the Software and install in Windows
+- Download the Software from: https://hugston.com/uploads/software/AI-ripper-1.0.0-portable-x64.exe
+- Run the portable or installer in Windows
 
 
 
@@ -50,11 +54,11 @@ or
 
 
 
-Clone this repository
+- Clone this repository
 
-Include the JavaScript file in your project
+- Include the JavaScript file in your project
 
-Initialize the tool by calling the provided functions
+- Initialize the tool by calling the provided functions
 
 
 
@@ -126,13 +130,13 @@ Special thanks to the open-source community for their valuable contributions to 
 
 
 
-Contact
+# Contact
 
 For any questions, please contact:
 
 Klaudi Bregu
 
-Info@hugston.com
+# - Info@hugston.com
 
 Hugston.com
 
