@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Ripper – Text Cleaner</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  >
+</head>
+<body>
+  <header>
+    <h1>AI Ripper – Text Cleaner</h1>
+    <p>Advanced text processing with intelligent cleaning and analysis</p>
+  </header>
+
+  <section class="features">
+    <h2>Features</h2>
+    <ul>
+      <li><i class="fas fa-broom"></i> Remove hidden characters and whitespace</li>
+      <li><i class="fas fa-code"></i> Refactor code for better readability</li>
+      <li><i class="fas fa-highlighter"></i> Highlight problematic characters</li>
+      <li><i class="fas fa-copy"></i> Copy cleaned text to clipboard</li>
+      <li><i class="fas fa-info-circle"></i> Detailed analysis of hidden characters</li>
+      <li><i class="fas fa-eraser"></i> One-click remove *all* hidden chars</li>
+    </ul>
+  </section>
+
+  <div class="container">
+    <div class="app-wrapper">
+
+      <!-- Input -->
+      <div class="input-section">
+        <h2 class="section-title"><i class="fas fa-paste"></i> Input Text</h2>
+        <div class="input-controls">
+          <!-- contenteditable div so we can inject <span> highlights -->
+          <div
+            id="inputText"
+            class="content-editable-textarea"
+            contenteditable="true"
+            data-placeholder="Paste your text here…"
+          ></div>
+
+          <!-- single toggle button (JS will switch icon & label) -->
+          <button id="showHiddenCharsButton" class="hidden-chars-toggle">
+            <i class="fas fa-search"></i> Detect Hidden Characters
+          </button>
+        </div>
+        <div class="buttons">
+          <button id="cleanButton"><i class="fas fa-broom"></i> Clean Text</button>
+          <button id="cleanAllHiddenButton" class="secondary">
+            <i class="fas fa-eraser"></i> Clean All Hidden Chars
+          </button>
+          <button id="refactorTextButton" class="secondary">
+            <i class="fas fa-text-height"></i> Refactor Text
+          </button>
+          <button id="refactorCodeButton" class="success">
+            <i class="fas fa-code"></i> Refactor Code
+          </button>
+          <button id="clearTextButton" class="danger">
+            <i class="fas fa-trash-alt"></i> Clear All
+          </button>
+        </div>
+      </div>
+
+      <!-- Output -->
+      <div class="output-section">
+        <h2 class="section-title"><i class="fas fa-text-height"></i> Output Text</h2>
+        <textarea id="outputText" readonly></textarea>
+        <button id="copyButton" class="copy-button">
+          <i class="fas fa-copy"></i> Copy Clean Text
+        </button>
+      </div>
+
+      <!-- Hidden-char list & details -->
+      <div class="hidden-chars-info">
+        <h3>Detected Hidden Characters</h3>
+        <div id="hiddenInfo">
+          <div class="char-list">
+            <div class="char-item">No hidden characters detected</div>
+          </div>
+          <div class="hidden-char-detail">
+            <p>Click on a character to view details</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="clean-stats">
+        <h3>Cleaning Statistics</h3>
+        <div id="cleanStats">
+          <p>Total hidden characters: <span id="totalHiddenChars">0</span></p>
+          <p>By category:</p>
+          <ul id="categoryStats">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://hugston.com" target="_blank">
+        <i class="fas fa-globe"></i> Visit hugston.com
+      </a>
+      <a href="mailto:info@hugston.com" target="_blank">
+        <i class="fas fa-envelope"></i> Contact info@hugston.com
+      </a>
+      <a href="https://github.com/Mainframework" target="_blank">
+        <i class="fab fa-github"></i> GitHub Repository
+      </a>
+    </div>
+    <div class="version-info">AI Ripper v1.0</div>
+  </footer>
+
+  <!-- “Copied!” notification -->
+  <div class="copy-notification" id="copyNotification">
+    Text copied to clipboard!
+  </div>
+
+  <!-- Renderer logic -->
+  <script src="renderer.js"></script>
+</body>
+</html>
