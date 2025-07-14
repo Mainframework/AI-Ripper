@@ -3,7 +3,11 @@
 - # Portable and installer for Windows
 - https://hugston.com/uploads/software/AI-ripper-1.0.0-portable-x64.exe
 
-<img width="1823" height="974" alt="Screenshot 2025-07-13 085701" src="https://github.com/user-attachments/assets/b5d5d949-7083-4f54-8500-02ed167755f6" />
+
+
+
+https://github.com/user-attachments/assets/45a8546f-a91a-42c6-8863-1740fc97038b
+
 
 
 
