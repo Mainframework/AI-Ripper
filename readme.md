@@ -88,7 +88,7 @@ License
 
 Hugston License with Additional Restrictions
 
-Copyright (c) 2023 Klaudi Bregu
+Copyright (c) 2025 Klaudi Bregu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, subject to the following conditions:
 
@@ -143,6 +143,7 @@ Klaudi Bregu
 # - Info@hugston.com
 
 Hugston.com
+
 
 
 
